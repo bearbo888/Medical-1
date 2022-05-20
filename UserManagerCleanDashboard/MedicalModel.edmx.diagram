@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7a3c6fe4c51c4c9abb03f858010122c6" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="MedicalModel.Administarator" Width="1.5" PointX="11.25" PointY="6.375" />
+        <EntityTypeShape EntityType="MedicalModel.Advertise" Width="1.5" PointX="13.5" PointY="6.375" />
+        <EntityTypeShape EntityType="MedicalModel.AdvertiseStatue" Width="1.5" PointX="11.25" PointY="3.75" />
+        <EntityTypeShape EntityType="MedicalModel.Article" Width="1.5" PointX="13.5" PointY="13.25" />
+        <EntityTypeShape EntityType="MedicalModel.ArticleComment" Width="1.5" PointX="5.25" PointY="21.375" />
+        <EntityTypeShape EntityType="MedicalModel.CaseRecord" Width="1.5" PointX="8.25" PointY="17.25" />
+        <EntityTypeShape EntityType="MedicalModel.City" Width="1.5" PointX="0.75" PointY="17.625" />
+        <EntityTypeShape EntityType="MedicalModel.ClinicDetail" Width="1.5" PointX="10.5" PointY="12.875" />
+        <EntityTypeShape EntityType="MedicalModel.ClinicRoom" Width="1.5" PointX="8.25" PointY="24.875" />
+        <EntityTypeShape EntityType="MedicalModel.Department" Width="1.5" PointX="6" PointY="9.375" />
+        <EntityTypeShape EntityType="MedicalModel.DepartmentCategory" Width="1.5" PointX="3.75" PointY="9.75" />
+        <EntityTypeShape EntityType="MedicalModel.Doctor" Width="1.5" PointX="8.25" PointY="12.75" />
+        <EntityTypeShape EntityType="MedicalModel.Experience" Width="1.5" PointX="10.5" PointY="26.75" />
+        <EntityTypeShape EntityType="MedicalModel.Gender" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="MedicalModel.Member" Width="1.5" PointX="3" PointY="15.75" />
+        <EntityTypeShape EntityType="MedicalModel.News" Width="1.5" PointX="16.5" PointY="6.25" />
+        <EntityTypeShape EntityType="MedicalModel.Newscategory" Width="1.5" PointX="14.25" PointY="3.75" />
+        <EntityTypeShape EntityType="MedicalModel.Order" Width="1.5" PointX="5.25" PointY="16.625" />
+        <EntityTypeShape EntityType="MedicalModel.OrderDetail" Width="1.5" PointX="10.5" PointY="20.5" />
+        <EntityTypeShape EntityType="MedicalModel.Orderstate" Width="1.5" PointX="3" PointY="12.5" />
+        <EntityTypeShape EntityType="MedicalModel.Paytype" Width="1.5" PointX="3" PointY="22.75" />
+        <EntityTypeShape EntityType="MedicalModel.Period" Width="1.5" PointX="8.25" PointY="6.625" />
+        <EntityTypeShape EntityType="MedicalModel.Product" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="MedicalModel.ProductBrand" Width="1.5" PointX="0.75" PointY="4.625" />
+        <EntityTypeShape EntityType="MedicalModel.ProductCategory" Width="1.5" PointX="0.75" PointY="6.875" />
+        <EntityTypeShape EntityType="MedicalModel.ProductSpecification" Width="1.5" PointX="5.25" PointY="5.375" />
+        <EntityTypeShape EntityType="MedicalModel.RatingDoctor" Width="1.5" PointX="10.5" PointY="17.5" />
+        <EntityTypeShape EntityType="MedicalModel.RatingType" Width="1.5" PointX="8.25" PointY="27.625" />
+        <EntityTypeShape EntityType="MedicalModel.Reserve" Width="1.5" PointX="12.75" PointY="17.375" />
+        <EntityTypeShape EntityType="MedicalModel.Review" Width="1.5" PointX="5.25" PointY="13.25" />
+        <EntityTypeShape EntityType="MedicalModel.ShipType" Width="1.5" PointX="3" PointY="25.125" />
+        <EntityTypeShape EntityType="MedicalModel.ShoppingCart" Width="1.5" PointX="8.25" PointY="21.5" />
+        <EntityTypeShape EntityType="MedicalModel.Source" Width="1.5" PointX="10.5" PointY="29.5" />
+        <EntityTypeShape EntityType="MedicalModel.State" Width="1.5" PointX="10.5" PointY="24.125" />
+        <EntityTypeShape EntityType="MedicalModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MedicalModel.Treatment" Width="1.5" PointX="10.5" PointY="9.625" />
+        <EntityTypeShape EntityType="MedicalModel.TreatmentDetail" Width="1.5" PointX="8.25" PointY="9.5" />
+        <AssociationConnector Association="MedicalModel.FK_Adverrise_Administarator" />
+        <AssociationConnector Association="MedicalModel.FK_Article_Administarator" />
+        <AssociationConnector Association="MedicalModel.FK_News_Administarator" />
+        <AssociationConnector Association="MedicalModel.FK_Adverrise_Advertisestatue" />
+        <AssociationConnector Association="MedicalModel.FK_Article_Doctor" />
+        <AssociationConnector Association="MedicalModel.FK_ArticleComment_Article" />
+        <AssociationConnector Association="MedicalModel.FK_ArticleComment_Member" />
+        <AssociationConnector Association="MedicalModel.FK_CaseRecord_Member" />
+        <AssociationConnector Association="MedicalModel.FK_CaseRecord_Reserve" />
+        <AssociationConnector Association="MedicalModel.FK_CaseRecord_TreatmentDetail" />
+        <AssociationConnector Association="MedicalModel.FK_Member_City" />
+        <AssociationConnector Association="MedicalModel.FK_Order_City" />
+        <AssociationConnector Association="MedicalModel.FK_ClinicDetail_ClinicRoom" />
+        <AssociationConnector Association="MedicalModel.FK_ClinicDetail_Department" />
+        <AssociationConnector Association="MedicalModel.FK_ClinicDetail_Doctor" />
+        <AssociationConnector Association="MedicalModel.FK_ClinicDetail_Period" />
+        <AssociationConnector Association="MedicalModel.FK_Reserve_ClinicDetail1" />
+        <AssociationConnector Association="MedicalModel.FK_Department_DepartmentCategory" />
+        <AssociationConnector Association="MedicalModel.FK_Doctor_Department" />
+        <AssociationConnector Association="MedicalModel.FK_TreatmentDetail_Department" />
+        <AssociationConnector Association="MedicalModel.FK_Doctor_Member" />
+        <AssociationConnector Association="MedicalModel.FK_Experience_Doctor" />
+        <AssociationConnector Association="MedicalModel.FK_RatingDoctor_Doctor" />
+        <AssociationConnector Association="MedicalModel.FK_Treatment_Doctor" />
+        <AssociationConnector Association="MedicalModel.FK_Member_Gender" />
+        <AssociationConnector Association="MedicalModel.FK_Order_Member" />
+        <AssociationConnector Association="MedicalModel.FK_Reserve_Member" />
+        <AssociationConnector Association="MedicalModel.FK_Review_Member" />
+        <AssociationConnector Association="MedicalModel.FK_ShoppingCart_Member" />
+        <AssociationConnector Association="MedicalModel.FK_News_Newscategory" />
+        <AssociationConnector Association="MedicalModel.FK_Order_Orderstate" />
+        <AssociationConnector Association="MedicalModel.FK_Order_Paytype" />
+        <AssociationConnector Association="MedicalModel.FK_Order_ShipType" />
+        <AssociationConnector Association="MedicalModel.FK_OrderDetail_Order" />
+        <AssociationConnector Association="MedicalModel.FK_OrderDetail_Product" />
+        <AssociationConnector Association="MedicalModel.FK_Product_ProductBrand" />
+        <AssociationConnector Association="MedicalModel.FK_Product_ProductCategory" />
+        <AssociationConnector Association="MedicalModel.FK_ProductSpecification_Product" />
+        <AssociationConnector Association="MedicalModel.FK_Review_Product" />
+        <AssociationConnector Association="MedicalModel.FK_ShoppingCart_Product" />
+        <AssociationConnector Association="MedicalModel.FK_RatingDoctor_RatingType" />
+        <AssociationConnector Association="MedicalModel.FK_Review_RatingType" />
+        <AssociationConnector Association="MedicalModel.FK_Reserve_Source" />
+        <AssociationConnector Association="MedicalModel.FK_Reserve_State" />
+        <AssociationConnector Association="MedicalModel.FK_Treatment_TreatmentDetail" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

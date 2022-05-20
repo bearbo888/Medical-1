@@ -1,0 +1,761 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6375952-BF21-43B9-BB2C-2FB6BC145B96}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Medical</RootNamespace>
+    <AssemblyName>Medical</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Siticone.Desktop.UI, Version=2.0.9.0, Culture=neutral, PublicKeyToken=422d444a8a9fa6db, processorArchitecture=MSIL">
+      <HintPath>..\packages\Siticone.Desktop.UI.2.0.9\lib\net40\Siticone.Desktop.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administarator.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Advertise.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdvertiseStatue.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Article.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ArticleComment.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaseRecord.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicDetail.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicRoom.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentCategory.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Experience.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="News.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Newscategory.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orderstate.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Paytype.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Period.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBrand.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategory.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSpecification.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingDoctor.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RatingType.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reserve.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Review.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShipType.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="shop\FrmAddProd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\FrmAddProd.designer.cs">
+      <DependentUpon>FrmAddProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop\FrmCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\FrmCheck.designer.cs">
+      <DependentUpon>FrmCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop\FrmOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\FrmOrder.designer.cs">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop\FrmOrderdetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\FrmOrderdetail.designer.cs">
+      <DependentUpon>FrmOrderdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop\FrmProductView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\FrmProductView.designer.cs">
+      <DependentUpon>FrmProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop\FrmShopping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\FrmShopping.designer.cs">
+      <DependentUpon>FrmShopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop\FrmShoppingList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\FrmShoppingList.designer.cs">
+      <DependentUpon>FrmShoppingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop\FrmUpdateProd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\FrmUpdateProd.designer.cs">
+      <DependentUpon>FrmUpdateProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop\Frm_Product_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\Frm_Product_manage.designer.cs">
+      <DependentUpon>Frm_Product_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop\ProductComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\ProductComment.designer.cs">
+      <DependentUpon>ProductComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop\Store.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shop\Store.designer.cs">
+      <DependentUpon>Store.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="State.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Treatment.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreatmentDetail.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Admin.designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ArticleInterface.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ArticleInterface.designer.cs">
+      <DependentUpon>ArticleInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Article_Back.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Article_Back.designer.cs">
+      <DependentUpon>Article_Back.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Article_BackCRUD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Article_BackCRUD.designer.cs">
+      <DependentUpon>Article_BackCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Article_FrontShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Article_FrontShow.designer.cs">
+      <DependentUpon>Article_FrontShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Article_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Article_User.designer.cs">
+      <DependentUpon>Article_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DoctorAddRating.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DoctorAddRating.designer.cs">
+      <DependentUpon>DoctorAddRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DoctorRating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\DoctorRating.Designer.cs">
+      <DependentUpon>DoctorRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Member_CaseReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Member_CaseReview.designer.cs">
+      <DependentUpon>Member_CaseReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DoctorMaintain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DoctorMaintain.Designer.cs">
+      <DependentUpon>DoctorMaintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DoctorDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DoctorDetail.Designer.cs">
+      <DependentUpon>DoctorDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DorctorCRUD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DorctorCRUD.Designer.cs">
+      <DependentUpon>DorctorCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Info.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberCenter_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberCenter_User.Designer.cs">
+      <DependentUpon>MemberCenter_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MyDoctor_MyClinic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MyDoctor_MyClinic.Designer.cs">
+      <DependentUpon>MyDoctor_MyClinic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MyDoctor_PatientView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MyDoctor_PatientView.designer.cs">
+      <DependentUpon>MyDoctor_PatientView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Member_ADD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Member_ADD.designer.cs">
+      <DependentUpon>Member_ADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberUpdate.designer.cs">
+      <DependentUpon>MemberUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MyPatientView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MyPatientView.designer.cs">
+      <DependentUpon>MyPatientView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\R1_ReserveMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\R1_ReserveMain.designer.cs">
+      <DependentUpon>R1_ReserveMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\R2_ReserveConfirm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\R2_ReserveConfirm.designer.cs">
+      <DependentUpon>R2_ReserveConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\R3_Complete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\R3_Complete.designer.cs">
+      <DependentUpon>R3_Complete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\R4_ReserveSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\R4_ReserveSearch.designer.cs">
+      <DependentUpon>R4_ReserveSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\R5_ClinicProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\R5_ClinicProgress.designer.cs">
+      <DependentUpon>R5_ClinicProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ResetPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ResetPassword.designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Schedule.designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Treatment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Treatment.Designer.cs">
+      <DependentUpon>Treatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MyDoctor_DoctorWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MyDoctor_DoctorWork.Designer.cs">
+      <DependentUpon>MyDoctor_DoctorWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MyDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MyDoctor.Designer.cs">
+      <DependentUpon>MyDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Logon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Logon.Designer.cs">
+      <DependentUpon>Logon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DoctorTeam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DoctorTeam.Designer.cs">
+      <DependentUpon>DoctorTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Notifications.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Notifications.Designer.cs">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Clinic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Clinic.Designer.cs">
+      <DependentUpon>Clinic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberCenter_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberCenter_Admin.Designer.cs">
+      <DependentUpon>MemberCenter_Admin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="shop\FrmAddProd.resx">
+      <DependentUpon>FrmAddProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop\FrmCheck.resx">
+      <DependentUpon>FrmCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop\FrmOrder.resx">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop\FrmOrderdetail.resx">
+      <DependentUpon>FrmOrderdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop\FrmProductView.resx">
+      <DependentUpon>FrmProductView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop\FrmShopping.resx">
+      <DependentUpon>FrmShopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop\FrmShoppingList.resx">
+      <DependentUpon>FrmShoppingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop\FrmUpdateProd.resx">
+      <DependentUpon>FrmUpdateProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop\Frm_Product_manage.resx">
+      <DependentUpon>Frm_Product_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop\ProductComment.resx">
+      <DependentUpon>ProductComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop\Store.resx">
+      <DependentUpon>Store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ArticleInterface.resx">
+      <DependentUpon>ArticleInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Article_Back.resx">
+      <DependentUpon>Article_Back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Article_BackCRUD.resx">
+      <DependentUpon>Article_BackCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Article_FrontShow.resx">
+      <DependentUpon>Article_FrontShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Article_User.resx">
+      <DependentUpon>Article_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DoctorAddRating.resx">
+      <DependentUpon>DoctorAddRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DoctorRating.resx">
+      <DependentUpon>DoctorRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Member_CaseReview.resx">
+      <DependentUpon>Member_CaseReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DoctorMaintain.resx">
+      <DependentUpon>DoctorMaintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DoctorDetail.resx">
+      <DependentUpon>DoctorDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DorctorCRUD.resx">
+      <DependentUpon>DorctorCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberCenter_User.resx">
+      <DependentUpon>MemberCenter_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MyDoctor_MyClinic.resx">
+      <DependentUpon>MyDoctor_MyClinic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MyDoctor_PatientView.resx">
+      <DependentUpon>MyDoctor_PatientView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Member_ADD.resx">
+      <DependentUpon>Member_ADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberUpdate.resx">
+      <DependentUpon>MemberUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MyPatientView.resx">
+      <DependentUpon>MyPatientView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\R1_ReserveMain.resx">
+      <DependentUpon>R1_ReserveMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\R2_ReserveConfirm.resx">
+      <DependentUpon>R2_ReserveConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\R3_Complete.resx">
+      <DependentUpon>R3_Complete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\R4_ReserveSearch.resx">
+      <DependentUpon>R4_ReserveSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\R5_ClinicProgress.resx">
+      <DependentUpon>R5_ClinicProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Treatment.resx">
+      <DependentUpon>Treatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MyDoctor_DoctorWork.resx">
+      <DependentUpon>MyDoctor_DoctorWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MyDoctor.resx">
+      <DependentUpon>MyDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Logon.resx">
+      <DependentUpon>Logon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DoctorTeam.resx">
+      <DependentUpon>DoctorTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Notifications.resx">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Clinic.resx">
+      <DependentUpon>Clinic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberCenter_Admin.resx">
+      <DependentUpon>MemberCenter_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="MedicalModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MedicalModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MedicalModel.edmx.diagram">
+      <DependentUpon>MedicalModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat_lightpng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assist3_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assist3_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assist2_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assist2_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assist1_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assist1_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteIcon.jpg" />
+    <None Include="bin\Debug\111.jpg" />
+    <None Include="bin\Debug\222.jpg" />
+    <Content Include="MedicalModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedicalModel.edmx</DependentUpon>
+      <LastGenOutput>MedicalModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MedicalModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedicalModel.edmx</DependentUpon>
+      <LastGenOutput>MedicalModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\智能眼科.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
